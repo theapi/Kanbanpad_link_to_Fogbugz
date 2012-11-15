@@ -16,7 +16,7 @@ function addFogbugzLinks() {
     var existing_link = $(this).find('a');
     if (existing_link.length == 0) {
       var fogbug_id = parseInt($(this).text());
-      if (fogbug_id > 0) {    console.log( fogbug_id );
+      if (fogbug_id > 0) {
         var url = 'http://fogbugz.dennisinteractive.co.uk/default.asp?' + fogbug_id;
         $(this).replaceWith('<p class="title"><a href="' + url + '" target="fogbugz" style="color:#3E3E3E">' + $(this).text() + '</a></p>');
       }
