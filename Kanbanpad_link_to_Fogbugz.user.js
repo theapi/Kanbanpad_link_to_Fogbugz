@@ -8,10 +8,15 @@
 
 $(document).ready(function() {   
   addFogbugzLinks();
-  setInterval(addFogbugzLinks, 15000);
+  setInterval(addFogbugzLinks, 4000);
 });
 
 function addFogbugzLinks() {
+  // Make avatars bigger.
+  $('.user img').each(function(){
+    var src = $(this).attr('src');
+    $(this).attr('src', src.replace('s=20', 's=100'));
+  });
   $('p.title').each(function(i) {
     var existing_link = $(this).find('a');
     if (existing_link.length == 0) {
